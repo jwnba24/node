@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 
 app.post('/postData', function(req, res) {
 	console.log("req.body: ", req.body);
-	connection.query("INSERT into test values('"+req.body.name+"', '"+req.body.email+"')", function(err, rows) {
+	connection.query("INSERT into test values('"+req.body.name+"', '"+req.body.money+"')", function(err, rows) {
 		if (!err)
 		 res.json({
 			"msg": "Inserrted Successfully",
